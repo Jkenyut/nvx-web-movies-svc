@@ -1,6 +1,15 @@
-const API_KEY = process.env.API_KEY;
+const API_KEY = process.env.NEXT_PUBLIC_TMDB_API_KEY;
 
-const Category = {
+interface CategoryItem {
+    title: string;
+    url: string;
+}
+
+interface CategoryMap {
+    [key: string]: CategoryItem;
+}
+
+const Category: CategoryMap = {
     fetchTrending: {
         title: "Trending",
         url: `/trending/all/week?api_key=${API_KEY}`,

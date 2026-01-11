@@ -1,10 +1,12 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
-    experimental: {
-        appDir: true,
-    },
     images: {
-        domains: ["links.papareact.com", "image.tmdb.org"],
+        remotePatterns: [
+            {
+                protocol: "https",
+                hostname: "image.tmdb.org",
+            },
+        ],
     },
 };
 
