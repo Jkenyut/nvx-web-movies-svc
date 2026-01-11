@@ -1,144 +1,70 @@
-# NVX Web Movies
+# NVX Movies 🎬
 
-<h3 align="center">🎬 A Modern Web Application for Exploring the World of Cinema 🎬</h3>
+**NVX Movies** is a cutting-edge, cinematic movie discovery web application built with **Next.js 15**, **React 19**, and **Shadcn UI**. It features a stunning, immersive dark-mode interface designed to provide a premium user experience comparable to top-tier streaming platforms.
 
-<p align="center">
-  A fast, responsive, and modern web application for Browse and discovering movies, built with the latest technologies from Next.js and Tailwind CSS.
-</p>
+![NVX Movies Banner](public/header-logo.png)
 
-<p align="center">
-  <a href="https://web-movie-consumption-api.vercel.app/"><strong>View Live Demo »</strong></a>
-</p>
+## ✨ Key Features
 
-<p align="center">
-  <img src="https://img.shields.io/badge/license-MIT-blue.svg" alt="License">
-  <img src="https://img.shields.io/badge/Next.js-13%2B-black?logo=next.js" alt="Next.js">
-  <img src="https://img.shields.io/badge/TypeScript-5.x-blue?logo=typescript" alt="TypeScript">
-  <img src="https://img.shields.io/badge/Tailwind_CSS-3.x-38B2AC?logo=tailwind-css" alt="Tailwind CSS">
-</p>
+### 🎨 Cinematic User Interface
+- **Immersive Hero Section**: Edge-to-edge full-screen carousel with gradient masking and dynamic typography.
+- **Neon Aesthetics**: Custom "Cyberpunk" design language with cyan glows, glassmorphism, and deep radial backgrounds.
+- **Fluid Animations**: Smooth entrance animations, hover zoom effects, and native-like fluid scrolling.
 
-<p align="center">
-  <img src="./img.png" alt="NVX Web Movies Showcase">
-</p>
+### 🚀 High-Performance Interaction
+- **Interactive Carousels**: All content lists (Trending, Popular, Categories) use advanced touch-friendly carousels (`embla-carousel`).
+- **Responsive Design**: Flawless layout adaptation from mobile phones to large desktop screens.
+- **Optimized Media**: Next.js Image optimization with consistent 16:9 aspect ratios and object-fit handling.
 
----
-
-## ✨ Features
-
--   ✅ **Browse Movies:** Explore popular, top-rated, and trending movies.
--   ✅ **Smart Search:** Quickly and accurately search for movies by title.
--   ✅ **Comprehensive Details:** View detailed information for each movie, including synopsis, cast, ratings, and official trailers.
--   ✅ **Responsive Interface:** Optimized for all screen sizes, from desktop to mobile.
--   ✅ **Modern User Experience:** A UI/UX designed for an engaging and intuitive movie discovery experience.
-
-## 🛠️ Tech Stack
-
-This application is built using a modern ecosystem focused on performance and developer experience.
-
--   **Framework:** [Next.js](https://nextjs.org/) 13+ (App Router)
--   **Language:** [TypeScript](https://www.typescriptlang.org/)
--   **Styling:** [Tailwind CSS](https://tailwindcss.com/)
--   **State Management & Data Fetching:** Native `fetch` API with React Server Components (RSC)
--   **Movie Data Source:** [The Movie Database (TMDB) API](https://www.themoviedb.org/documentation/api)
--   **Deployment:** [Vercel](https://vercel.com/)
+### 🛠 Enterprise-Grade Architecture
+- **Tech Stack**: Next.js 15 (App Router), TypeScript, Tailwind CSS, Shadcn UI, Lucide Icons.
+- **Strict Typing**: Full TypeScript coverage with strictly defined interfaces.
+- **Modular Codebase**: Clean separation of concerns (`components/layout`, `components/features`, `utils`).
+- **Robust Error Handling**: Custom Error Boundaries and 404 Not Found pages.
 
 ## 🚀 Getting Started
 
-Follow these steps to get a local copy of the project up and running for development and testing purposes.
+### Prerequisites
+- Node.js > 18.17.0 (Recommended: v24.x)
+- npm or yarn
 
-### 1. Prerequisites
+### Installation
 
-Ensure you have the following software installed:
--   [Node.js](https://nodejs.org/en/) (v16 or later)
--   [pnpm](https://pnpm.io/installation) (or `npm`/`yarn`)
-
-### 2. Installation & Setup
-
-1.  **Clone this repository:**
-    ```
-    git clone [this project]
-    cd project
-    ```
-
-2.  **Install all dependencies:**
+1.  **Clone the repository**
     ```bash
-    pnpm install
+    git clone https://github.com/your-username/nvx-web-movies.git
+    cd nvx-web-movies
     ```
 
-3.  **Configure Environment Variables:**
-    This application requires an API key from TMDB.
+2.  **Install dependencies**
+    ```bash
+    npm install
+    ```
 
-    -   Create a file named `.env.local` in the project's root directory.
-    -   Register for a free API key on the [TMDB website](https://www.themoviedb.org/signup).
-    -   Add the following variable to your `.env.local` file:
-        ```env
-        NEXT_PUBLIC_TMDB_API_KEY="YOUR_TMDB_API_KEY_HERE"
-        ```
+3.  **Environment Setup**
+    Create a `.env.local` file in the root directory and add your TMDB API key:
+    ```env
+    NEXT_PUBLIC_TMDB_API_KEY=your_tmdb_api_key_here
+    ```
 
-### 3. Running the Development Server
+4.  **Run the development server**
+    ```bash
+    npm run dev
+    ```
+    Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
 
-Once the setup is complete, run the following command to start the development server:
+## 📦 Build & Deploy
 
-```bash
-pnpm dev
-```
-
-Open [http://localhost:3000](http://localhost:3000) in your browser to see the app in action.
-
-### 4. Building for Production
-
-To create a production-ready build, run:
+To create a production build:
 
 ```bash
-pnpm build
-pnpm start
+npm run build
 ```
 
-## 📂 Project Structure
-
-This project's directory structure follows the Next.js App Router conventions for scalability and readability.
-
-```
-nvx-web-movies/
-├── app/                  # Main pages, layouts, and app routes
-│   ├── (api)/            # API routes (e.g., /api/movies)
-│   ├── (components)/     # UI components used across the application
-│   ├── (lib)/            # Helper functions, utilities, and type definitions
-│   ├── layout.tsx        # Main application layout
-│   └── page.tsx          # Homepage
-├── public/               # Static assets (images, fonts, icons)
-├── tailwind.config.ts    # Tailwind CSS configuration
-└── ...                   # Other configuration files
-```
-
-## 🚢 Deployment
-
-The easiest way to deploy this Next.js application is by using [Vercel](https://vercel.com/), the platform from the creators of Next.js.
-
-[![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/)
-
-Click the button above to automatically clone and deploy this project. Don't forget to add the `NEXT_PUBLIC_TMDB_API_KEY` environment variable in your Vercel project settings.
-
-## 🤝 Contributing
-
-We warmly welcome contributions from the community! If you'd like to contribute:
-
-1.  **Fork** this repository.
-2.  Create a new **Feature Branch** (`git checkout -b feature/YourNewFeature`).
-3.  **Commit** your changes (`git commit -m 'feat: Add YourNewFeature'`).
-4.  **Push** to your branch (`git push origin feature/YourNewFeature`).
-5.  Open a **Pull Request**.
+This project is optimized for deployment on **Vercel**.
 
 ## 📄 License
-
-This project is licensed under the [MIT License](https://opensource.org/license/mit). See the `LICENSE` file for more details.
-
-## 📬 Contact
-
-**Satria Nur Saputro**
-
--   Email: [satrianursaputro06@gmail.com](mailto:satrianursaputro06@gmail.com)
+This project is open-source and available under the MIT License.
 
 ---
-
-Made with ❤️ and a passion for cinema.
+*Built with ❤️ by NVX Team*
