@@ -6,7 +6,7 @@ import { Movie } from "@/utils/types";
 
 export default function Thumbnail({Result}: { Result: Movie }) {
 
-    const Base_URL: String = "https://image.tmdb.org/t/p/original/";
+    const Base_URL: String = "https://image.tmdb.org/t/p/w780/";
     return (
         <div className="p-2 transition duration-300 transform sm:hover:scale-105 hover:z-50 group cursor-pointer animate-in fade-in slide-in-from-bottom-8 duration-700">
             <div className="relative w-full aspect-video group-hover:shadow-[0_0_20px_rgba(6,182,212,0.6)] group-hover:ring-2 group-hover:ring-cyan-500/50 transition-all duration-300 rounded-xl overflow-hidden">
