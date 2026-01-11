@@ -5,7 +5,6 @@ import Category from "@/utils/request";
 
 const getCategory = async (genre: keyof typeof Category) => {
     const uri = Category[genre].url;
-    console.log(uri);
     const res = await fetch(`https://api.themoviedb.org/3${uri}`, {
         cache: "no-store",
     });
