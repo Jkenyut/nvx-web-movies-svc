@@ -17,7 +17,7 @@ import React, {Key} from "react";
 
 export default function Nav({trendingDay, trendingWeek, populer}: { trendingDay: Movie[], trendingWeek: Movie[], populer: Movie[] }) {
     const router = useRouter();
-    const Base_URL: String = "https://image.tmdb.org/t/p/original/";
+    const Base_URL: String = "https://image.tmdb.org/t/p/w1280/";
     const plugin = React.useRef(
         Autoplay({ delay: 2000, stopOnInteraction: true })
     )

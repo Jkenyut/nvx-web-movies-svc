@@ -11,7 +11,7 @@ import {
 import { Movie } from "@/utils/types";
 
 function Thumbnail({ Result }: { Result: Movie }) {
-    const Base_URL: String = "https://image.tmdb.org/t/p/original/";
+    const Base_URL: String = "https://image.tmdb.org/t/p/w500/";
     return (
         <div
             className="transition duration-300 transform sm:hover:scale-105 hover:z-50 group cursor-pointer h-full mx-2 animate-in fade-in zoom-in duration-500">
