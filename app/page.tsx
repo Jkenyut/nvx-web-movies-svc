@@ -1,6 +1,6 @@
-import Header from "./Header";
-import Nav from "./Nav";
-import Results from "./Results";
+import Header from "@/components/layout/Header";
+import Nav from "@/components/layout/Nav";
+import Results from "@/components/features/Results";
 import Category from "@/utils/request";
 
 const getCategory = async (genre: keyof typeof Category) => {
@@ -27,15 +27,16 @@ const getData = async (uri: string) => {
     return res.json();
 };
 
-async function Home({
-                        params,
-                        searchParams,
-                    }: {
-    params: { slug: string };
-    searchParams?: { [key: string]: string | string[] | undefined | any };
+async function Home(props: {
+    params: Promise<{ slug: string }>;
+    searchParams?: Promise<{ [key: string]: string | string[] | undefined }>;
 }) {
-    const API_KEY = process.env.API_KEY;
-    const resCategory = await getCategory(searchParams?.genre || "fetchTrending");
+    const searchParams = await props.searchParams;
+    const API_KEY = process.env.NEXT_PUBLIC_TMDB_API_KEY;
+    const genre = searchParams?.genre as string;
+    const selectedGenre = (genre && Category[genre as keyof typeof Category]) ? (genre as keyof typeof Category) : "fetchTrending";
+    
+    const resCategory = await getCategory(selectedGenre);
     const trendingDay = await getData(
         `https://api.themoviedb.org/3/trending/movie/day?api_key=${API_KEY}`
     );
